@@ -1,10 +1,13 @@
 <strong>My Blog Page</strong>
+<br>
 <a href="/new">Create New Blog Input</a>
 <ul>
 	<% @blogs.each do |blog| %>
 	<li>
 		<strong><a href="/blog/<%= blog.id %>"><%= blog.title %></a></strong><br>
 		<%= blog.date %><br>
-		<%= blog.writeup %></li>
+		<%= blog.writeup %><br>
+		<a href="/update_blog/<%= blog.id %>">edit</a></strong></li>
+		<br>
 	<% end %>
 </ul>

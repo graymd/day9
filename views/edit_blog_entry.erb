@@ -1,0 +1,16 @@
+<h2>Update Blog Here</h2>
+<br>
+<a href="/">Return to main</a>
+
+<form action="/update/<%= @blog.id %>" method="post" id="blog">
+	<label>Post Title</label>
+	<input type="text" name="title" value="<%= @blog.title %>">
+	<br>
+	<label>Post Date</label>
+	<input type="text" name="date" value="<%= @blog.date %>">
+	<br>
+	<label>Blog Entry</label>
+	<textarea name="writeup" form="blog" rows="10" column="100"><%= @blog.writeup %></textarea>
+	<br>
+	<input type="submit" value="Update Blog Entry">
+</form>
