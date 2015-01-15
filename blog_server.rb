@@ -60,20 +60,12 @@ get '/update_blog/:id' do
 end
 
 patch '/update/:id' do
-	@blog.Blog.get params[:id]
-	@blog.title = params[:title]
-	@blog.date = params[:date]
-	@blog.writeup = params[:writeup]
-	@blog.update
+	@blog = Blog.get params[:id]
+	@blog.update title:params[:title]
+	@blog.update date:params[:date]
+	@blog.update writeup:params[:writeup]
 	redirect to '/'
 end
-
-
-
-
-
-
-
 
 
 
