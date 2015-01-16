@@ -26,6 +26,7 @@ end
 
 #New
 get '/new' do
+	@page_title = "Create a New Blog Entry"
 	erb :create_new_blog_entry
 end
 
@@ -42,6 +43,7 @@ end
 #Show
 get '/blog/:id' do
 	@blog = Blog.get params[:id]
+	@page_title = "Blog Entry"
 	erb :display_blog
 end
 
@@ -56,6 +58,7 @@ end
 # #update
 get '/update_blog/:id' do
 	@blog = Blog.get params[:id]
+	@page_title = "Blog Edit"
 	erb :edit_blog_entry
 end
 
